@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Sean Aba</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .custom-bg {
+            background: linear-gradient(135deg, #1d1e25 0%, #605d63 100%);
+        }
+        
+        .project-card {
+            transition: all 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .skill-badge {
+            transition: all 0.2s ease;
+        }
+        
+        .skill-badge:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-xl font-bold text-gray-800">Sean Aba</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-600 hover:text-gray-900">About</a>
+                    <a href="#projects" class="text-gray-600 hover:text-gray-900">Projects</a>
+                    <a href="#skills" class="text-gray-600 hover:text-gray-900">Skills</a>
+                    <a href="#contact" class="text-gray-600 hover:text-gray-900">Contact</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-gray-800 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden fixed top-16 left-0 w-full bg-white shadow-md z-40">
+        <div class="flex flex-col">
+            <a href="#about" class="block px-6 py-4 border-b border-gray-200 text-gray-600 hover:bg-gray-50">About</a>
+            <a href="#projects" class="block px-6 py-4 border-b border-gray-200 text-gray-600 hover:bg-gray-50">Projects</a>
+            <a href="#skills" class="block px-6 py-4 border-b border-gray-200 text-gray-600 hover:bg-gray-50">Skills</a>
+            <a href="#contact" class="block px-6 py-4 text-gray-600 hover:bg-gray-50">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center custom-bg">
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+        <div class="relative z-10 text-center px-4 md:px-8 text-white" data-aos="fade-up">
+            <h1 class="text-5xl md:text-7xl font-bold mb-4">Sean Aba</h1>
+            <p class="text-xl md:text-2xl mb-8">Grade 12 High School Student</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">About Me</h2>
+            <div class="max-w-3xl mx-auto">
+                <div class="text-lg leading-relaxed space-y-4" data-aos="fade-up" data-aos-delay="100">
+                    <p class="text-gray-700">
+                        I am Sean Aba, a High School Student with a passion for technology and programming. 
+                        I enjoy creating web applications, programming games, and learning new technologies to enhance my skills.
+                    </p>
+                    <p class="text-gray-700">
+                        With my progressing experience within front-end and back-end development, I enjoy working on projects that can challenge
+                        me to grow and learn, especially through projects and hackathons. When I am not coding, I enjoy playing sports, video games, 
+                        cooking, and more.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- TrashTag Project Card -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-full h-48 bg-gradient-to-br from-green-400 to-blue-500 flex items-center justify-center">
+                        <span class="text-white text-4xl font-bold">TrashTag</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2">TrashTag</h3>
+                        <p class="text-gray-700 mb-4">
+                            An App that gamifies neighborhood cleanup. 
+                            Users report and confirm litter with photos while earning points, and compete on local leaderboards. 
+                            Built with Firebase and Google Places API, HTML, CSS, JavaScript. 
+                            Won third at Incubator Hacks II.
+                        </p>
+                        <a href="#" class="text-blue-500 hover:underline">View Project →</a>
+                    </div>
+                </div>
+                
+                <!-- MonkeyTrain Project Card -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-full h-48 bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center">
+                        <span class="text-white text-4xl font-bold">MonkeyTrain</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2">MonkeyTrain</h3>
+                        <p class="text-gray-700 mb-4">
+                            A Web-Based application to help users learn and practice cognitive brain games.
+                            Programmed using Python Pygame system, HTML, JavaScript, CSS, Flask Backend.
+                            Currently in development. Check out the Repository on GitHub!
+                        </p>
+                        <a href="#" class="text-blue-500 hover:underline">View Project →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
