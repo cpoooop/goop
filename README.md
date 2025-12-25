@@ -1,2 +1,2 @@
 # portfolio v1
-Work in Progress
+- Showcase of projects.
